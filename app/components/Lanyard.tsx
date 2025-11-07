@@ -44,9 +44,11 @@ export default function Lanyard({
         onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
       >
         <ambientLight intensity={Math.PI} />
-        <Physics gravity={gravity} timeStep={1 / 60}>
-          <Band scale={scale} /> //diganti
-        </Physics>
+        <group scale={[scale, scale, scale]}> {/* ✅ seluruh scene dikecilin */}
+          <Physics gravity={gravity} timeStep={1 / 60}>
+            <Band scale={scale} /> //diganti
+          </Physics>
+        </group>
         <Environment blur={0.75}>
           <Lightformer
             intensity={2}
