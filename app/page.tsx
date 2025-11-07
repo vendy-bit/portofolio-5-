@@ -83,6 +83,7 @@ export default function Home() {
             <Lanyard
               position={[0, 0, isMobile ? 20 : 10]}   // ✅ kalau di HP, kameranya lebih jauh
               gravity={[0, isMobile ? -20 : -40, 0]}  // ✅ gravity dikurang biar halus
+              scale={isMobile ? 0.7 : 1}               // 🟥 tambah ini: kecilin 30% kalau di HP
             />
           </div>
         </div>
