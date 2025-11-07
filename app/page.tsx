@@ -1,10 +1,19 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import Lanyard from "./components/Lanyard";
 import RotatingText from "./components/RotatingText/RotatingText";
 import SplitText from "./components/SplitText/SplitText";
 import BlurText from "./components/BlurText/BlurText";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen overflow-x-hidden">
       <div className="container mx-auto h-screen px-4 sm:px-6">
@@ -71,8 +80,10 @@ export default function Home() {
 
           {/* Bagian 3D */}
           <div className="md:col-span-6 flex justify-center items-center">
-            <Lanyard position={[0, 0, 10]} gravity={[0, -40, 0]} />
-          </div>
+            <Lanyard
+              position={[0, 0, isMobile ? 20 : 10]}   // ✅ kalau di HP, kameranya lebih jauh
+              gravity={[0, isMobile ? -20 : -40, 0]}  // ✅ gravity dikurang biar halus
+            />          </div>
         </div>
       </div>
     </div>
