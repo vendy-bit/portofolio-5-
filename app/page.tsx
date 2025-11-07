@@ -10,7 +10,8 @@ export default function Home() {
       <div className="container mx-auto h-screen px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 h-full items-center">
           {/* Bagian teks */}
-          <div className="md:col-span-6 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-y-6 py-10 md:py-0">
+          <div className="md:col-span-6 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-y-4 py-10 md:py-0">
+
             {/* Baris pertama */}
             <div className="flex flex-col sm:flex-row items-center gap-2">
               <h1 className="text-xl sm:text-2xl text-white font-bold">
@@ -31,7 +32,7 @@ export default function Home() {
             </div>
 
             {/* Baris kedua dan ketiga */}
-            <div className="mt-4 flex flex-col items-center md:items-start space-y-1">
+            <div className="mt-3 flex flex-col items-center md:items-start space-y-1">
               <SplitText
                 text="I'm Vendy Setiawan"
                 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center md:text-left"
@@ -64,7 +65,7 @@ export default function Home() {
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-sm sm:text-base mt-6 text-gray-300 max-w-lg leading-relaxed text-center md:text-left"
+              className="text-sm sm:text-base mt-4 text-gray-300 max-w-lg leading-relaxed text-center md:text-left"
             />
           </div>
 
