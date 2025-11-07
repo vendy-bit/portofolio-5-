@@ -73,7 +73,7 @@ export default function Home() {
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-sm sm:text-base mt-2 text-gray-300 max-w-lg leading-relaxed text-center md:text-left"
+              className="text-sm sm:text-base mt-0.5 text-gray-300 max-w-lg leading-relaxed text-center md:text-left"
             />
           </div>
 
@@ -83,7 +83,8 @@ export default function Home() {
             <Lanyard
               position={[0, 0, isMobile ? 20 : 10]}   // ✅ kalau di HP, kameranya lebih jauh
               gravity={[0, isMobile ? -20 : -40, 0]}  // ✅ gravity dikurang biar halus
-            />          </div>
+            />
+          </div>
         </div>
       </div>
     </div>
